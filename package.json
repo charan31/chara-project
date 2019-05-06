@@ -1,0 +1,28 @@
+{
+  "name": "charan-project",
+  "version": "1.0.0",
+  "description": "this is sample project with user registration and login ",
+  "main": "server.js",
+  "scripts": {
+    "build": "babel src -s inline -d dist",
+    "start": "npm run build && node dist/",
+    "test": "npm test"
+  },
+  "author": "charan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.19.0",
+    "express": "~4.16.4",
+    "express-boom": "~3.0.0",
+    "express-pino-logger": "~4.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "~7.4.4",
+    "@babel/core": "~7.4.4",
+    "@babel/node": "~7.2.2",
+    "@babel/preset-env": "~7.4.4",
+    "@babel/register": "~7.4.4",
+    "babel-preset-latest": "~6.24.1",
+    "nodemon": "~1.19.0"
+  }
+}
