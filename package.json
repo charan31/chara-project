@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src -s inline -d dist",
     "start": "npm run build && node dist/",
-    "test": "npm test"
+    "test": "mocha 'test/**/*.test.js' --require @babel/register"
   },
   "author": "charan",
   "license": "ISC",
@@ -15,7 +15,9 @@
     "express": "~4.16.4",
     "express-boom": "~3.0.0",
     "express-pino-logger": "~4.0.0",
-    "mongodb": "~3.2.3"
+    "joi": "~14.3.1",
+    "jsonwebtoken": "~8.5.1",
+    "nedb": "~1.8.0"
   },
   "devDependencies": {
     "@babel/cli": "~7.4.4",
@@ -23,7 +25,14 @@
     "@babel/node": "~7.2.2",
     "@babel/preset-env": "~7.4.4",
     "@babel/register": "~7.4.4",
+    "@types/code": "~4.0.5",
+    "babel-plugin-transform-runtime": "~6.23.0",
+    "babel-polyfill": "~6.26.0",
     "babel-preset-latest": "~6.24.1",
-    "nodemon": "~1.19.0"
+    "code": "~5.2.4",
+    "mocha": "~6.1.4",
+    "nodemon": "~1.19.0",
+    "sinon": "~7.3.2",
+    "supertest": "~4.0.2"
   }
 }

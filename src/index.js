@@ -2,6 +2,7 @@ import express from 'express'
 import Parser from 'body-parser'
 import boom from 'express-boom'
 
+
 import { Log, LogMiddleware } from './services'
 
 const app = express()
@@ -13,6 +14,7 @@ app.use(Parser.urlencoded({ limit: '50mb',
 app.use(boom())
 app.use(LogMiddleware)
 
+
 app.use((req, res, next) => {
   res.set('Content-Type', 'application/json')
   next()
@@ -20,7 +22,8 @@ app.use((req, res, next) => {
 
 const port = 8000;
 
-app.listen(port, () => {
+let server = app.listen(port, () => {
+    Log.info('Server started')
     console.log('server started listening on ' + port);
   });
 
